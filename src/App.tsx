@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Home } from "./Screens/Home/Home"
+import { MainLayout } from "./Layouts/MainLayout"
 
 function App() {
 
@@ -11,9 +12,9 @@ function App() {
   ])
 
   return (
-    <>
+    <MainLayout>
       <RouterProvider router={router} />
-    </>
+    </MainLayout>
   )
 }
 
