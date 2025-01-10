@@ -13,7 +13,7 @@ export const MainLayout = ({children}: {children: ReactNode}) => {
         (isOpen) && <ContactModal/>
       }
       <NavBar isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <main className="w-full h-screen m-auto">
+      <main className="w-full h-screen m-auto overflow-scroll">
         {children}
       </main>
       <Footer/>

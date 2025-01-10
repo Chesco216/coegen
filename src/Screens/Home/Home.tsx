@@ -1,9 +1,10 @@
+import { Slider } from "./components/Slider/Slider"
+
 export const Home = () => {
   return (
-    <div className="my-auto px-[20%] flex flex-row items-center justify-center">
-
-      <img className="w-[400px]" src="https://coe.bo/images/2024/12/19/3.jpg"/>
-      <p className="w-fit h-fit">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div className="my-auto px-[20%] flex flex-col items-center justify-center">
+      <img src="https://coe.bo/images/2024/12/19/coe.jpg"/>
+      <Slider/>
     </div>
   )
 }
