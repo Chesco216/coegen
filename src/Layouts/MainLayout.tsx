@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react"
 import { NavBar } from "../components/NavBar/NavBar"
 import { ContactModal } from "../components/Modals/ContactModal"
+import { Footer } from "../components/Footer/Footer"
 
 export const MainLayout = ({children}: {children: ReactNode}) => {
 
@@ -12,7 +13,10 @@ export const MainLayout = ({children}: {children: ReactNode}) => {
         (isOpen) && <ContactModal/>
       }
       <NavBar isOpen={isOpen} setIsOpen={setIsOpen}/>
-      {children}
+      <main className="w-full h-screen m-auto">
+        {children}
+      </main>
+      <Footer/>
     </div>
   )
 }
