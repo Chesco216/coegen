@@ -9,7 +9,7 @@ export const Slider = () => {
   const [cardIndex, setCardIndex] = useState<number>(0)
 
   return (
-    <div className="flex flex-row animate-fade-in">
+    <div className="flex flex-row animation-fade-in">
       <button disabled={(cardIndex == 0) ? true : false}
         onClick={() => setCardIndex(cardIndex - 1)}
       ><Arrow w={50} h={50} color='black' bg='white'/></button>
