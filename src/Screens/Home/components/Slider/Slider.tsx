@@ -1,9 +1,22 @@
+import { useState } from "react"
+import { Arrow } from "../../../../assets/data/Arrow"
+import { sliderData } from "../../../../assets/data/slider"
+import { SliderCard } from "./SliderCard"
+
 export const Slider = () => {
+
+  const cards = sliderData
+  const [cardIndex, setCardIndex] = useState<number>(0)
+
   return (
-    <>
-      <img className="w-[400px]" src="https://coe.bo/images/2024/12/19/3.jpg"/>
-      <p className="w-fit h-fit">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </>
+    <div className="flex flex-row animate-fade-in">
+      <button disabled={(cardIndex == 0) ? true : false}
+        onClick={() => setCardIndex(cardIndex - 1)}
+      ><Arrow w={50} h={50} color='black' bg='white'/></button>
+      <SliderCard img={cards[cardIndex].img} description={cards[cardIndex].description} />
+      <button className="rotate-180" disabled={(cardIndex == (cards.length - 1)) ? true : false}
+        onClick={() => setCardIndex(cardIndex + 1)}
+      ><Arrow w={50} h={50} color='black' bg='white'/></button>
+    </div>
   )
 }
-
