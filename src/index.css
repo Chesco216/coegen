@@ -6,4 +6,7 @@
   .atag:active {
     color: #f43f5e;
   }
+  .mid-radius {
+    border-radius: 50% / 100% 100% 0 0;
+  }
 }
