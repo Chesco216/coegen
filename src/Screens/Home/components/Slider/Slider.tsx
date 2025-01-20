@@ -12,11 +12,25 @@ export const Slider = () => {
     <div className="flex flex-row animation-fade-in">
       <button disabled={(cardIndex == 0) ? true : false}
         onClick={() => setCardIndex(cardIndex - 1)}
-      ><Arrow w={50} h={50} color='black' bg='white'/></button>
+      ><Arrow 
+          w={50}
+          h={50} 
+          color={(cardIndex == 0) ? '#6b7280' : 'black'} 
+          bg={(cardIndex == 0) ? '#cbd5e1' : 'white'}
+        />
+
+      </button>
       <SliderCard img={cards[cardIndex].img} description={cards[cardIndex].description} />
       <button className="rotate-180" disabled={(cardIndex == (cards.length - 1)) ? true : false}
         onClick={() => setCardIndex(cardIndex + 1)}
-      ><Arrow w={50} h={50} color='black' bg='white'/></button>
+      ><Arrow 
+          w={50} 
+          h={50} 
+          color={(cardIndex == (cards.length - 1)) ? '#6b7280' : 'black'} 
+          bg={(cardIndex == (cards.length - 1)) ? '#cbd5e1' : 'white'}
+        />
+
+      </button>
     </div>
   )
 }
